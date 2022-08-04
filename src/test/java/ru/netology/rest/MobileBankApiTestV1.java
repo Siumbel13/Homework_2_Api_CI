@@ -13,11 +13,11 @@ class MobileBankApiTestV1 {
         given()
                 .baseUri("http://localhost:9999/api/v1")
                 // Выполняемые действия
-                .when()
+        .when()
                 .get("/demo/accounts")
                 // Проверки
                 // код теста
-                .then()
+        .then()
                 .statusCode(200)
                 // static import для JsonSchemaValidator.matchesJsonSchemaInClasspath
                 .body(matchesJsonSchemaInClasspath("accounts.schema.json"))
